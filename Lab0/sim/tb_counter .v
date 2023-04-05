@@ -22,8 +22,8 @@
 
 module tb_counter;
 
-logic clk, rst;
-logic [3:0] count;
+reg clk, rst;
+wire [3:0] count;
 
 counter dut(clk, rst, count);
 
@@ -38,7 +38,7 @@ initial begin
     $dumpvars(2, dut);
     clk <= 0;
     rst <= 1;
-    #1;
+    #2;
     rst <= 0;
     for (i = 0; i < 16; i = i + 1) begin
         $display("time: %02d; counter: %02d", $stime, count);
