@@ -1,4 +1,0 @@
-Running: xsim.dir/combinational_gates_muxed_tb_behav/xsimk -simmode gui -wdb combinational_gates_muxed_tb_behav.wdb -simrunnum 0 -socket 58057
-Design successfully loaded
-Design Loading Memory Usage: 29128 KB (Peak: 29692 KB)
-Design Loading CPU Usage: 30 ms

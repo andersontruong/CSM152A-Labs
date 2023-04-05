@@ -1,7 +1,0 @@
-0.7
-2020.2
-Oct 14 2022
-05:07:14
-/home/anderson/Documents/GitHub/CSM152A-Labs/Lab0_Intro/Lab0_Intro.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
-/home/anderson/Documents/GitHub/CSM152A-Labs/Lab0_Intro/resources/combinational_gates/combinational_gates_muxed.v,1674522828,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab0_Intro/resources/combinational_gates/combinational_gates_muxed_TB.v,,combinational_gates_muxed,,,,,,,,
-/home/anderson/Documents/GitHub/CSM152A-Labs/Lab0_Intro/resources/combinational_gates/combinational_gates_muxed_TB.v,1674522828,verilog,,,,combinational_gates_muxed_tb,,,,,,,,
