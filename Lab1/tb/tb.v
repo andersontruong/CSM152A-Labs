@@ -16,28 +16,47 @@ module tb;
    wire [7:0]           led;                    // From uut_ of nexys3.v
    // End of automatics
 
+   integer fd, j, scanRet;
+   reg [8:0] line_count[0:0];
+   reg [7:0] lines [0:1024];
+
    initial
      begin
         //$shm_open  ("dump", , ,1);
         //$shm_probe (tb, "ASTF");
+
+         // ur mom
+        for (j = 0; j < 1024; j = j + 1)
+         lines[j] = 0;
+
+        // Read from your mom
+        $readmemb("/home/anderson/Documents/GitHub/CSM152A-Labs/Lab1/tb/seq.code", line_count);
+        $readmemb("/home/anderson/Documents/GitHub/CSM152A-Labs/Lab1/tb/seq.code", lines);
+        $display("line_count: %d", line_count);
 
         clk = 0;
         btnR = 1;
         btnS = 0;
         #1000 btnR = 0;
         #1500000;
+
+        j = 1;
+        while (j < lines[0]) begin
+         tskRunInst(lines[j]);
+         j = j + 1;
+        end
         
-        tskRunPUSH(0,4);
-        tskRunPUSH(0,0);
-        tskRunPUSH(1,3);
-        tskRunMULT(0,1,2);
-        tskRunADD(2,0,3);
-        tskRunSEND(0);
-        tskRunSEND(1);
-        tskRunSEND(2);
-        tskRunSEND(3);
+      //   tskRunPUSH(0,4);
+      //   tskRunPUSH(0,0);
+      //   tskRunPUSH(1,3);
+      //   tskRunMULT(0,1,2);
+      //   tskRunADD(2,0,3);
+      //   tskRunSEND(0);
+      //   tskRunSEND(1);
+      //   tskRunSEND(2);
+      //   tskRunSEND(3);
         
-        #1000;        
+        #1000;
         $finish;
      end
 
@@ -67,7 +86,7 @@ module tb;
    task tskRunInst;
       input [7:0] inst;
       begin
-         $display ("%d ... Running instruction %08b", $stime, inst);
+         // $display ("%d ... Running instruction %08b", $stime, inst);
          sw = inst;
          #1500000 btnS = 1;
          #3000000 btnS = 0;
@@ -115,12 +134,12 @@ module tb;
       end
    endtask //
 
-   always @ (posedge clk)
-     if (uut_.inst_vld)
-       $display("%d ... instruction %08b executed", $stime, uut_.inst_wd);
+   // always @ (posedge clk)
+   //   if (uut_.inst_vld)
+   //     $display("%d ... instruction %08b executed", $stime, uut_.inst_wd);
 
-   always @ (led)
-     $display("%d ... led output changed to %08b", $stime, led);
+   // always @ (led)
+   //   $display("%d ... led output changed to %08b", $stime, led);
    
 endmodule // tb
 // Local Variables:
