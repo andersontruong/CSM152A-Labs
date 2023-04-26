@@ -7,8 +7,7 @@ module lzc(D, a, q);
 
    assign a = ~|D;
 
-   assign q[0] = ~(D[2] | D[3]);
-
-   assign q[1] = ((~D[1])|D[2]) & ~D[3];
+   assign q[0] = ((~D[1])|D[2]) & ~D[3];
+   assign q[1] = ~(D[2] | D[3]);
 
 endmodule; // lzc
