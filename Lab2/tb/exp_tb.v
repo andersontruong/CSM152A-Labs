@@ -7,13 +7,13 @@ module exp_tb;
 
    initial begin
     
-      mag <= 'b10000000000;
+      mag <= 'b10000000000; //0 leading zeros
       #10;
-      mag <= 'b01000000000;
+      mag <= 'b01000000000; //1 leading zero
       #10;
-      mag <= 'b00100000000;
+      mag <= 'b00100000000; //2 leading zeros
       #10;
-      mag <= '10001000000;
+      mag <= 'b0001000000; //etc.
       #10;
       mag <= 'b00001000000;
       #10;

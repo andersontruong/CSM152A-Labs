@@ -11,7 +11,7 @@ module exp(mag, E);
    wire [1:0]        z1;
 
    assign upper_bits = mag[10:7];
-   assign lower_bits = mag[7:4];
+   assign lower_bits = mag[6:3];
 
    lzc upper(upper_bits, a[0], z0);
    lzc lower(lower_bits, a[1], z1);
