@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/lzc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lzc
+WARNING: [VRFC 10-2502] extra semicolon in $unit (global) scope [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/lzc.v:14]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/tb/lzc_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lzc_tb

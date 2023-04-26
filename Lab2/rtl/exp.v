@@ -3,12 +3,21 @@ module exp(D, E);
    input wire [10:0] mag;
    output wire [2:0] E;
 
-   integer           i;
-   
-   always @(*) begin
-      for (i = 0; i < 8; i = i + 1) begin
-         
-      end
-   end
+   wire [3:0]        upper_bits;
+   wire [3:0]        lower_bits;
 
-endmodule
+   wire [1:0]        a;
+   wire [1:0]        z0;
+   wire [1:0]        z1;
+
+   assign upper_bits = mag[7:4];
+   assign lower_bits = mag[3:0];
+
+   lzc upper(upper_bits, a[0], z0);
+   lzc lower(lower_bits, a[1], z1);
+
+   assign E[1:0] = a[0] ? z1 : z0;
+   assign E[2] = a[0];
+
+endmodule; // exp
+
