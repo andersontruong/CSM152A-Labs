@@ -1,8 +1,11 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../../rtl/FPCVT.v" \
 "../../../../../rtl/exp.v" \
 "../../../../../rtl/lzc.v" \
-"../../../../../tb/exp_tb.v" \
+"../../../../../rtl/rounder.v" \
+"../../../../../rtl/sigma.v" \
+"../../../../../tb/FPCVT_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

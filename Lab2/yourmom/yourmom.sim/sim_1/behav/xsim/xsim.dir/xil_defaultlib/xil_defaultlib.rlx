@@ -2,11 +2,12 @@
 2020.2
 Oct 14 2022
 05:07:14
-/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/FPCVT.v,1682371834,verilog,,,,FPCVT,,,,,,,,
-/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/exp.v,1682541127,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/lzc.v,,exp,,,,,,,,
-/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/lzc.v,1682539396,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/tb/exp_tb.v,,lzc,,,,,,,,
-/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/signmag.v,1682371365,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/FPCVT.v,,sigma,,,,,,,,
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/FPCVT.v,1682676636,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/exp.v,,FPCVT,,,,,,,,
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/exp.v,1682541292,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/lzc.v,,exp,,,,,,,,
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/lzc.v,1682539396,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/rounder.v,,lzc,,,,,,,,
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/rounder.v,1682677293,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/sigma.v,,rounder,,,,,,,,
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/sigma.v,1682371365,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/tb/FPCVT_tb.v,,sigma,,,,,,,,
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/tb/FPCVT_tb.v,1682676491,verilog,,,,FPCVT_tb,,,,,,,,
 /home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/tb/exp_tb.v,1682539628,verilog,,,,exp_tb,,,,,,,,
 /home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/tb/lzc_tb.v,1682461377,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/signmag.v,,lzc_tb,,,,,,,,
-/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/tb/signmag_tb.v,1682371159,verilog,,,,tb,,,,,,,,
 /home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/yourmom/yourmom.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
