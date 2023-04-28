@@ -1,4 +1,0 @@
-Running: xsim.dir/FPCVT_tb_behav/xsimk -simmode gui -wdb FPCVT_tb_behav.wdb -simrunnum 0 -socket 46319
-Design successfully loaded
-Design Loading Memory Usage: 29132 KB (Peak: 29700 KB)
-Design Loading CPU Usage: 20 ms
