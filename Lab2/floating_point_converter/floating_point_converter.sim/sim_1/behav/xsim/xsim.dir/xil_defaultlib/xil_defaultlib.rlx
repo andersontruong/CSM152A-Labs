@@ -1,0 +1,11 @@
+0.7
+2020.2
+Oct 14 2022
+05:07:14
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/floating_point_converter/floating_point_converter.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/FPCVT.v,1682973414,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/exp.v,,FPCVT,,,,,,,,
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/exp.v,1682970551,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/lzc.v,,exp,,,,,,,,
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/lzc.v,1682677727,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/rounder.v,,lzc,,,,,,,,
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/rounder.v,1682973649,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/sigma.v,,rounder,,,,,,,,
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/sigma.v,1682677640,verilog,,/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/tb/FPCVT_tb.v,,sigma,,,,,,,,
+/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/tb/FPCVT_tb.v,1682973446,verilog,,,,FPCVT_tb,,,,,,,,

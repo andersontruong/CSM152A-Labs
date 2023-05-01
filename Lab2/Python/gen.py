@@ -85,6 +85,8 @@ def write_all(binary_list, filename):
         f.write(exps)
 
 if __name__ == '__main__':
-    print('Begin generating tests')
-    binary_list = all_numbers()
-    write_all(binary_list, 'test.code')
+    # print('Begin generating tests')
+    # print(all_numbers())
+    binary_list = '\n'.join(list(map(lambda x: 'D <= \'b' + bin(x)[2:] + ';$display("%b: TS: %b, S:%b, E:%b, F:%b", D, TWOS, S, E, F);' + '#10;', all_numbers())))
+    print(binary_list)
+    # write_all(binary_list, 'test.code')
