@@ -16,8 +16,7 @@ module rounder(i_mag_temp, i_exp, o_significand, o_exp);
     end
 
     // "All it takes is faith, trust, and pixie dust." - Peter Pan
-     assign o_significand = (temp[0] & ~&temp[4:1]) ? temp[4:1] + 1 : temp[4:1];
-    assign o_significand = temp[0] ? (&temp[4:1] ? temp[4:1] : temp[4:1] + 1) : temp[4:1];
+    assign o_significand = temp[0] ? (&temp[4:1] ? 'b1000 : temp[4:1] + 1) : temp[4:1];
     assign o_exp = &temp[4:1] ? (&i_exp ? i_exp : i_exp + 1) : i_exp;
 
 endmodule
