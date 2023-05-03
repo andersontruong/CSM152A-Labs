@@ -4094,3 +4094,4 @@ D <= 'b111111111100;$display("%b: TS: %b, S:%b, E:%b, F:%b", D, TWOS, S, E, F);#
 D <= 'b111111111101;$display("%b: TS: %b, S:%b, E:%b, F:%b", D, TWOS, S, E, F);#10;
 D <= 'b111111111110;$display("%b: TS: %b, S:%b, E:%b, F:%b", D, TWOS, S, E, F);#10;
 D <= 'b111111111111;$display("%b: TS: %b, S:%b, E:%b, F:%b", D, TWOS, S, E, F);#10;
+D <= 'b1000000000000;$display("%b: TS: %b, S:%b, E:%b, F:%b", D, TWOS, S, E, F);#10;

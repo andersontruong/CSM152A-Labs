@@ -13,4 +13,3 @@ INFO: [VRFC 10-311] analyzing module sigma
 WARNING: [VRFC 10-2502] extra semicolon in $unit (global) scope [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/sigma.v:21]
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/tb/FPCVT_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module FPCVT_tb
-WARNING: [VRFC 10-2502] extra semicolon in $unit (global) scope [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/tb/FPCVT_tb.v:4129]

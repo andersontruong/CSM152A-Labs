@@ -1,5 +1,5 @@
 def all_numbers():
-    num_list = [i for i in range(pow(2, 12))]
+    num_list = [i for i in range(pow(2, 12) + 1)]
     return num_list
 
 def get_sign_magnitude(twos_binary):
