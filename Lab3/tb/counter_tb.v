@@ -2,9 +2,10 @@ module counter_tb;
 
     reg clk, en, rst;
 
-    wire [5:0] count;
+    wire [2:0] count;
+    wire carry;
 
-    counter #(.N(6)) uut(clk, en, rst, count);
+    counter #(.N(3)) uut(clk, en, rst, count, carry);
 
     always begin
         #0.5 clk <= ~clk;

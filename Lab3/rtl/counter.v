@@ -5,11 +5,15 @@ module counter
     clk,
     en,
     rst,
-    count
+    count,
+    carry
 );
 
     input wire clk, en, rst;
     output reg [N-1:0] count;
+    output wire carry;
+
+    assign carry = count == {N{1'b1}};
 
     always @(posedge clk) begin
         if (rst)
