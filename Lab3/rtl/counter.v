@@ -1,26 +1,33 @@
 module counter
 #(
-    parameter N=6
-)(
-    clk,
-    en,
-    rst,
-    count,
-    carry
+    parameter N=6,
+    parameter MAX=0
+)
+(
+    i_clk,
+    i_en,
+    i_rst,
+    o_count,
+    o_carry
 );
+    localparam MAX_OVERFLOW = MAX ? MAX : $pow(2, N);
+    input wire i_clk, i_en, i_rst;
+    output reg [N-1:0] o_count;
+    output wire o_carry;
 
-    input wire clk, en, rst;
-    output reg [N-1:0] count;
-    output wire carry;
+    assign o_carry = o_count == MAX_OVERFLOW - 1;
 
-    assign carry = count == {N{1'b1}};
-
-    always @(posedge clk) begin
-        if (rst)
-            count <= 1'b0;
+    always @(posedge i_clk, posedge i_rst) begin
+        if (i_rst)
+            o_count <= 0;
         else begin
-            if (en) begin
-                count <= count + 1'b1;
+            if (i_en) begin
+                if (o_count == MAX_OVERFLOW - 1) begin
+                    o_count <= 0;
+                end
+                else begin
+                    o_count <= o_count + 1'b1;
+                end
             end
         end
     end

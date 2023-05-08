@@ -14,9 +14,9 @@ module divider
     always @(posedge(i_clk), posedge(i_rst)) begin
         if (i_rst) begin
             count <= 0;
-            o_clk <= 0;
+            o_clk <= 1;
         end
-        else if (count == FREQ) begin
+        else if (count == FREQ - 1) begin
             count <= 0;
             o_clk <= ~o_clk;
         end
