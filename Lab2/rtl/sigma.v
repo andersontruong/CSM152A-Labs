@@ -18,4 +18,4 @@ module sigma(i_twos, o_sign, o_mag_temp);
 
    assign o_mag_temp = mag - (upper & !mag);
 
-endmodule; // sigma
+endmodule

@@ -26,5 +26,5 @@ module exp(i_mag, o_exp_temp);
    assign o_exp_temp = 7 - leading_zeros;
 
 
-endmodule; // exp
+endmodule
 

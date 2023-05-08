@@ -2,14 +2,11 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM
 INFO: [VRFC 10-311] analyzing module FPCVT
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/exp.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module exp
-WARNING: [VRFC 10-2502] extra semicolon in $unit (global) scope [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/exp.v:29]
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/lzc.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module lzc
-WARNING: [VRFC 10-2502] extra semicolon in $unit (global) scope [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/lzc.v:14]
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/rounder.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module rounder
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/sigma.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sigma
-WARNING: [VRFC 10-2502] extra semicolon in $unit (global) scope [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/rtl/sigma.v:21]
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab2/tb/FPCVT_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module FPCVT_tb

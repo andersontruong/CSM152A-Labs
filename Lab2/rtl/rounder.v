@@ -13,7 +13,6 @@ module rounder(i_mag_temp, i_exp, o_significand, o_exp);
             always @(*) begin
                 if (i_exp == i)
                     temp <= i_mag_temp[(3+i):i - 1];
-                    // temp <= 3 + i;
             end
         end
     endgenerate
@@ -67,7 +66,5 @@ module rounder(i_mag_temp, i_exp, o_significand, o_exp);
             o_exp <= i_exp;
         end
     end
-    // assign o_significand = !i_exp ? i_mag_temp[3:0] : (temp[0] ? (&temp[4:1] ? 'b1000 : temp[4:1] + 1) : temp[4:1]);
-    // assign o_exp = &temp[4:1] ? (&i_exp ? i_exp : i_exp + 1) : i_exp;
 
 endmodule
