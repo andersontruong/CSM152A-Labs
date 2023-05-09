@@ -16,7 +16,7 @@ module divider
 
     wire clk_en;
 
-    counter #(.N(BIT_WIDTH), .MAX(DIV)) div_counter(.i_clk(i_clk), .i_en(1), .i_rst(i_rst), .o_count(), .o_carry(clk_en));
+    counter #(.N(BIT_WIDTH), .MAX(DIV)) div_counter(.i_clk(i_clk), .i_en(1'b1), .i_rst(i_rst), .o_count(), .o_carry(clk_en));
 
     always @(posedge i_clk) begin
         if (i_rst)
