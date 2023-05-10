@@ -10,7 +10,7 @@ module counter
     o_count,
     o_carry
 );
-    localparam integer MAX_OVERFLOW = MAX ? MAX : $pow(2, N);
+    localparam integer MAX_OVERFLOW = MAX ? MAX : 1<<(N);
     input wire i_clk, i_en, i_rst;
     output reg [N-1:0] o_count;
     output wire o_carry;
