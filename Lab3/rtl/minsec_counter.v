@@ -1,7 +1,7 @@
 module minsec_counter
 #(
-    parameter FREQ1 = 50_000_000,
-    parameter FREQ2 = 25_000_000
+    parameter DIV1 = 50_000_000,
+    parameter DIV2 = 25_000_000
 )
 (
     i_clk,
