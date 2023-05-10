@@ -29,19 +29,19 @@ module fourdigitdriver
         case (dig_state)
             0: begin
                 selected_digit <= dig1;
-                dig_sel <= 4'b0001;
+                dig_sel <= 4'b1110;
             end
             1: begin
                 selected_digit <= dig2;
-                dig_sel <= 4'b0010;
+                dig_sel <= 4'b1101;
             end
             2: begin
                 selected_digit <= dig3;
-                dig_sel <= 4'b0100;
+                dig_sel <= 4'b1011;
             end
             3: begin
                 selected_digit <= dig4;
-                dig_sel <= 4'b1000;
+                dig_sel <= 4'b0111;
             end
             default: begin
                 selected_digit <= 4'b1;
@@ -52,16 +52,16 @@ module fourdigitdriver
 
     always @(*) begin
         case (selected_digit)
-            0: seg <= 8'b00111111;
-            1: seg <= 8'b00000110;
-            2: seg <= 8'b01011011;
-            3: seg <= 8'b01001111;
-            4: seg <= 8'b01100110;
-            5: seg <= 8'b01101101;
-            6: seg <= 8'b01111101;
-            7: seg <= 8'b00000111;
-            8: seg <= 8'b01111111;
-            9: seg <= 8'b01101111;
+            0: seg <= 8'b11000000;
+            1: seg <= 8'b11111001;
+            2: seg <= 8'b10100100;
+            3: seg <= 8'b10110000;
+            4: seg <= 8'b10011001;
+            5: seg <= 8'b10010010;
+            6: seg <= 8'b10000010;
+            7: seg <= 8'b11111000;
+            8: seg <= 8'b10000000;
+            9: seg <= 8'b10010000;
             default:  seg <= 8'b00000000;
         endcase
     end
