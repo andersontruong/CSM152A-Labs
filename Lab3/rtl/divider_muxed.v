@@ -17,7 +17,7 @@ module divider_muxed
 
     assign o_clk = i_sel ? clk2 : clk1;
 
-    divider #(.DIV(FREQ1)) div1(i_clk, i_rst, clk1);
-    divider #(.DIV(FREQ2)) div2(i_clk, i_rst, clk2);
+    divider #(.DIV(DIV1)) div1(i_clk, i_rst, clk1);
+    divider #(.DIV(DIV2)) div2(i_clk, i_rst, clk2);
 
 endmodule
