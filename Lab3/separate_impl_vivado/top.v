@@ -27,7 +27,7 @@ module impl_top(
     digits sec(SECONDS, dig2, dig1);
     digits min(MINUTES, dig4, dig3);
 
-    fourdigitdriver #(.REFRESH_DIV(1_000_000))
+    fourdigitdriver #(.REFRESH_DIV(100_000))
     driver(
         .i_clk(clk), 
         .i_rst(rst), 

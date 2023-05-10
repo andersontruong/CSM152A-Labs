@@ -6,7 +6,11 @@ module impl_top(
     seg,
     dig_sel
 );
-    assign seg = 8'b10111111;
-    assign dig_sel = 4'b1111;
+    input wire clk, rst, ADJ, SEL;
+    output wire [7:0] seg;
+    output wire [3:0] dig_sel;
+
+    assign seg = 8'b01000000;
+    assign dig_sel = 4'b0000;
 
 endmodule
