@@ -1,7 +1,6 @@
 module fourdigitdriver
 #(
-    parameter BASE_CLK=100_000_000,
-    parameter REFRESH_RATE=1
+    parameter REFRESH_DIV=1_000_000
 )
 (
     i_clk,
@@ -24,7 +23,7 @@ module fourdigitdriver
 
     reg [1:0] dig_state;
 
-    divider #(.BASE_CLK(BASE_CLK), .TARGET_CLK(REFRESH_RATE)) clk_div(i_clk, i_rst, display_clk);
+    divider #(.DIV(REFRESH_DIV)) clk_div(i_clk, i_rst, display_clk);
 
     always @(*) begin
         case (dig_state)

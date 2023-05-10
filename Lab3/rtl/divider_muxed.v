@@ -1,8 +1,7 @@
 module divider_muxed
 #(
-    parameter BASE_CLK = 100_000_000,
-    parameter FREQ1 = 1,
-    parameter FREQ2 = 2
+    parameter DIV1 = 50_000_000,
+    parameter DIV2 = 25_000_000
 )
 (
     i_clk,
@@ -18,7 +17,7 @@ module divider_muxed
 
     assign o_clk = i_sel ? clk2 : clk1;
 
-    divider #(.BASE_CLK(BASE_CLK), .TARGET_CLK(FREQ1)) div1(i_clk, i_rst, clk1);
-    divider #(.BASE_CLK(BASE_CLK), .TARGET_CLK(FREQ2)) div2(i_clk, i_rst, clk2);
+    divider #(.DIV(FREQ1)) div1(i_clk, i_rst, clk1);
+    divider #(.DIV(FREQ2)) div2(i_clk, i_rst, clk2);
 
 endmodule

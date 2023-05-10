@@ -1,6 +1,6 @@
 module counter
 #(
-    parameter N=6,
+    parameter N=27,
     parameter MAX=0
 )
 (

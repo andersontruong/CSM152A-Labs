@@ -1,8 +1,7 @@
 module minsec_counter
 #(
-    parameter BASE_CLK = 100_000_000,
-    parameter FREQ1 = 1,
-    parameter FREQ2 = 2
+    parameter FREQ1 = 50_000_000,
+    parameter FREQ2 = 25_000_000
 )
 (
     i_clk,
@@ -25,7 +24,7 @@ module minsec_counter
     assign second_en = ~ADJ | (ADJ & ~SEL);
     assign minute_en = (~ADJ & second_carry) | (ADJ & SEL);
 
-    divider_muxed #(.BASE_CLK(BASE_CLK), .FREQ1(FREQ1), .FREQ2(FREQ2)) 
+    divider_muxed #(.DIV1(DIV1), .DIV2(DIV2)) 
         div(
             .i_clk(i_clk), 
             .i_rst(i_rst), 
