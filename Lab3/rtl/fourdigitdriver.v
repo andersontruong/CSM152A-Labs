@@ -26,28 +26,34 @@ module fourdigitdriver
     divider #(.DIV(REFRESH_DIV)) clk_div(i_clk, i_rst, display_clk);
 
     always @(*) begin
-        case (dig_state)
-            0: begin
-                selected_digit <= dig1;
-                dig_sel <= 4'b1110;
-            end
-            1: begin
-                selected_digit <= dig2;
-                dig_sel <= 4'b1101;
-            end
-            2: begin
-                selected_digit <= dig3;
-                dig_sel <= 4'b1011;
-            end
-            3: begin
-                selected_digit <= dig4;
-                dig_sel <= 4'b0111;
-            end
-            default: begin
-                selected_digit <= 4'b1;
-                dig_sel <= 4'b1;
-            end
-        endcase
+        if (i_rst) begin
+          selected_digit <= 4'b0000;
+          dig_sel <= 4'b0000;
+        end
+        else begin
+          case (dig_state)
+              0: begin
+                  selected_digit <= dig1;
+                  dig_sel <= 4'b1110;
+              end
+              1: begin
+                  selected_digit <= dig2;
+                  dig_sel <= 4'b1101;
+              end
+              2: begin
+                  selected_digit <= dig3;
+                  dig_sel <= 4'b1011;
+              end
+              3: begin
+                  selected_digit <= dig4;
+                  dig_sel <= 4'b0111;
+              end
+              default: begin
+                  selected_digit <= 4'b1;
+                  dig_sel <= 4'b1;
+              end
+          endcase
+        end  
     end
 
     always @(*) begin
