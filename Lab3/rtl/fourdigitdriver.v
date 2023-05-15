@@ -33,8 +33,8 @@ module fourdigitdriver
 
     wire SEC_BLINK, MIN_BLINK;
     
-    assign SEC_BLINK = ADJ & ~SEL;
-    assign MIN_BLINK = ADJ & SEL;
+    assign SEC_BLINK = ADJ & ~SEL & blink_clk;
+    assign MIN_BLINK = ADJ & SEL & blink_clk;
 
     always @(*) begin
         if (i_rst) begin
@@ -68,7 +68,7 @@ module fourdigitdriver
     end
 
     always @(*) begin
-        if (blink_clk) begin
+        if ((SEC_BLINK && (dig_state == 0 || dig_state == 1)) || (MIN_BLINK && (dig_state == 2 || dig_state == 3))) begin
           seg <= 8'b11111111;
         end
         else begin

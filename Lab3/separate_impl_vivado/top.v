@@ -36,7 +36,9 @@ module impl_top(
         .dig3(dig3), 
         .dig4(dig4), 
         .seg(seg), 
-        .dig_sel(dig_sel)
+        .dig_sel(dig_sel),
+        .ADJ(ADJ),
+        .SEL(SEL)
         );
 
 endmodule
