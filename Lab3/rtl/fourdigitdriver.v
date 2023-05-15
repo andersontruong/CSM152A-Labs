@@ -10,9 +10,11 @@ module fourdigitdriver
     dig3,
     dig4,
     seg,
-    dig_sel
+    dig_sel,
+    SEL,
+    ADJ
 );
-    input i_clk, i_rst;
+    input i_clk, i_rst, SEL, ADJ;
     input [3:0] dig1, dig2, dig3, dig4;
 
     output reg [7:0] seg;
@@ -24,6 +26,15 @@ module fourdigitdriver
     reg [1:0] dig_state;
 
     divider #(.DIV(REFRESH_DIV)) clk_div(i_clk, i_rst, display_clk);
+    
+    wire blink_clk;
+    
+    divider #(.DIV(12_500_000)) blink(i_clk, i_rst, blink_clk);
+
+    wire SEC_BLINK, MIN_BLINK;
+    
+    assign SEC_BLINK = ADJ & ~SEL;
+    assign MIN_BLINK = ADJ & SEL;
 
     always @(*) begin
         if (i_rst) begin
@@ -33,8 +44,8 @@ module fourdigitdriver
         else begin
           case (dig_state)
               0: begin
-                  selected_digit <= dig1;
                   dig_sel <= 4'b1110;
+                  selected_digit <= dig1;
               end
               1: begin
                   selected_digit <= dig2;
@@ -57,19 +68,24 @@ module fourdigitdriver
     end
 
     always @(*) begin
-        case (selected_digit)
-            0: seg <= 8'b11000000;
-            1: seg <= 8'b11111001;
-            2: seg <= 8'b10100100;
-            3: seg <= 8'b10110000;
-            4: seg <= 8'b10011001;
-            5: seg <= 8'b10010010;
-            6: seg <= 8'b10000010;
-            7: seg <= 8'b11111000;
-            8: seg <= 8'b10000000;
-            9: seg <= 8'b10010000;
-            default:  seg <= 8'b00000000;
-        endcase
+        if (blink_clk) begin
+          seg <= 8'b11111111;
+        end
+        else begin
+          case (selected_digit)
+              0: seg <= 8'b11000000;
+              1: seg <= 8'b11111001;
+              2: seg <= 8'b10100100;
+              3: seg <= 8'b10110000;
+              4: seg <= 8'b10011001;
+              5: seg <= 8'b10010010;
+              6: seg <= 8'b10000010;
+              7: seg <= 8'b11111000;
+              8: seg <= 8'b10000000;
+              9: seg <= 8'b10010000;
+              default:  seg <= 8'b00000000;
+          endcase
+        end
     end
 
     always @(posedge display_clk) begin
