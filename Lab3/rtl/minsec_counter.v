@@ -21,7 +21,7 @@ module minsec_counter
     reg second_rst, minute_rst;
     wire second_en, minute_en;
 
-    assign second_en = ~ADJ | (ADJ & ~SEL);
+    assign second_en = (~ADJ) | (ADJ & ~SEL);
     assign minute_en = (~ADJ & second_carry) | (ADJ & SEL);
 
     divider_muxed #(.DIV1(DIV1), .DIV2(DIV2)) 
@@ -50,4 +50,4 @@ module minsec_counter
         .o_carry()
         );
 
-endmodule;
+endmodule
