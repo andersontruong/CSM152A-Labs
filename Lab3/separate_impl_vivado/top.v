@@ -1,12 +1,14 @@
+
 module impl_top(
     clk,
     rst,
     ADJ,
     SEL,
+    PAUSE,
     seg,
     dig_sel
 );
-    input clk, rst, ADJ, SEL;
+    input clk, rst, ADJ, SEL, PAUSE;
 
     output [7:0] seg;
     output [3:0] dig_sel;
@@ -14,12 +16,30 @@ module impl_top(
     wire [3:0] dig1, dig2, dig3, dig4;
 
     wire [5:0] MINUTES, SECONDS;
-
+    
+    wire res_sel;
+    wire res_adj;
+    
+    debounce debouncer1(
+        .clk(clk),
+        .rst(rst),
+        .btn(SEL),
+        .result(res_sel)
+    );
+    
+    debounce debouncer2(
+        .clk(clk),
+        .rst(rst),
+        .btn(ADJ),
+        .result(res_adj)
+    );
+    
     minsec_counter stopwatch(
         .i_clk(clk),
         .i_rst(rst),
-        .ADJ(ADJ),
-        .SEL(SEL),
+        .i_en(~PAUSE),
+        .ADJ(res_adj),
+        .SEL(res_sel),
         .MINUTES(MINUTES),
         .SECONDS(SECONDS)
     );

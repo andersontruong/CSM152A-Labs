@@ -1,6 +1,6 @@
 module debounce
 #(
-    parameter N=20
+    parameter N=22
 )
 (
     clk,
@@ -32,6 +32,6 @@ module debounce
 
     assign sclr = ff1 ^ ff2;
 
-    counter #(.N(N)) count_module(.clk(clk), .en(~carry), .rst(sclr), .count(), .carry(carry));
+    counter #(.N(N)) count_module(.i_clk(clk), .i_en(~carry), .i_rst(sclr), .o_count(), .o_carry(carry));
 
 endmodule

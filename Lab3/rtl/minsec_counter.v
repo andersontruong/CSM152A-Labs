@@ -6,13 +6,14 @@ module minsec_counter
 (
     i_clk,
     i_rst,
+    i_en,
     ADJ,
     SEL,
     MINUTES,
     SECONDS
 );
 
-    input wire i_clk, i_rst, ADJ, SEL;
+    input wire i_clk, i_rst, i_en, ADJ, SEL;
     output wire [5:0] MINUTES, SECONDS;
 
     wire clk_selected;
@@ -21,8 +22,8 @@ module minsec_counter
     reg second_rst, minute_rst;
     wire second_en, minute_en;
 
-    assign second_en = (~ADJ) | (ADJ & ~SEL);
-    assign minute_en = (~ADJ & second_carry) | (ADJ & SEL);
+    assign second_en = ((~ADJ) | (ADJ & ~SEL)) & i_en;
+    assign minute_en = ((~ADJ & second_carry) | (ADJ & SEL)) & i_en;
 
     divider_muxed #(.DIV1(DIV1), .DIV2(DIV2)) 
         div(
