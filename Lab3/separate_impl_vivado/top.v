@@ -19,6 +19,20 @@ module impl_top(
     
     wire res_sel;
     wire res_adj;
+    wire curr_pause_state;
+    reg  prev_pause_state;
+    reg  pause_output;
+    
+    always @(posedge clk) begin
+      if (rst) begin
+        prev_pause_state <= 0;
+        pause_output <= 0;
+      end
+      else if (curr_pause_state && ~prev_pause_state) begin
+        pause_output <= ~pause_output;
+      end
+      prev_pause_state <= curr_pause_state;
+    end
     
     debounce debouncer1(
         .clk(clk),
@@ -34,10 +48,17 @@ module impl_top(
         .result(res_adj)
     );
     
+    debounce debouncer3(
+        .clk(clk),
+        .rst(rst),
+        .btn(PAUSE),
+        .result(curr_pause_state)
+    );
+    
     minsec_counter stopwatch(
         .i_clk(clk),
         .i_rst(rst),
-        .i_en(~PAUSE),
+        .i_en(~pause_output),
         .ADJ(res_adj),
         .SEL(res_sel),
         .MINUTES(MINUTES),
