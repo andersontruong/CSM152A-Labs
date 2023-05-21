@@ -1,6 +1,7 @@
 module fourdigitdriver
 #(
-    parameter REFRESH_DIV=1_000_000
+    parameter REFRESH_DIV=1_000_000,
+    parameter BLINK_DIV=12_500_000
 )
 (
     i_clk,
@@ -29,7 +30,7 @@ module fourdigitdriver
     
     wire blink_clk;
     
-    divider #(.DIV(12_500_000)) blink(i_clk, i_rst, blink_clk);
+    divider #(.DIV(BLINK_DIV)) blink(i_clk, i_rst, blink_clk);
 
     wire SEC_BLINK, MIN_BLINK;
     

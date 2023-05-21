@@ -3,7 +3,7 @@ module minsec_counter_tb;
     reg clk, rst, ADJ, SEL;
     wire [5:0] MINUTES, SECONDS;
 
-    minsec_counter #(.DIV1(1), .DIV2(2))
+    minsec_counter #(.DIV1(2), .DIV2(1))
     uut(
         .i_clk(clk),
         .i_rst(rst),
@@ -25,13 +25,11 @@ module minsec_counter_tb;
         SEL <= 1'b0;
         #0.5;
         rst <= 1'b0;
-        #10;
+        #300;
         ADJ <= 1'b1;
+        #300;
         SEL <= 1'b1;
-        #50;
-        SEL <= 1'b0;
-        #50;
-        ADJ <= 1'b0;
+        #300;
     end
 
 endmodule
