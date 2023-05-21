@@ -4,7 +4,7 @@ module divider_muxed_tb;
 
     wire o_clk;
 
-    divider_muxed #(.BASE_CLK(4), .FREQ1(1), .FREQ(2)) uut(.i_clk(clk), .i_rst(rst), .i_sel(sel), .o_clk(o_clk));
+    divider_muxed #(.DIV1(1), .DIV2(2)) uut(.i_clk(clk), .i_rst(rst), .i_sel(sel), .o_clk(o_clk));
 
     always begin
         #0.5 clk <= ~clk;

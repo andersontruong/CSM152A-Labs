@@ -4,7 +4,7 @@ module divider_tb;
 
     wire o_clk;
 
-    divider #(.BASE_CLK(4), .TARGET_CLK(1)) uut(.i_clk(clk), .i_rst(rst), .o_clk(o_clk));
+    divider #(.DIV(2)) uut(.i_clk(clk), .i_rst(rst), .o_clk(o_clk));
 
     always begin
         #0.5 clk <= ~clk;
