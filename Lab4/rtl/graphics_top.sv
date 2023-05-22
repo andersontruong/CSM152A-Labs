@@ -3,13 +3,17 @@
 module graphics_top(
     input  CLK100MHZ,
     input  [3:0] btn,
-    output [7:0] ja,
-    output [7:0] jb
+    input  [5:0] SW,
+    output [3:0] VGA_R,
+    output [3:0] VGA_G,
+    output [3:0] VGA_B,
+    output VGA_HS,
+    output VGA_VS
     );
 
-    wire [3:0] reds [63:0];
-    wire [3:0] blues [63:0];
-    wire [3:0] greens [63:0];
+    logic [3:0] reds [63:0];
+    logic [3:0] blues [63:0];
+    logic [3:0] greens [63:0];
 
     always @(*) begin
         reds[0]   <= 4'h2;
@@ -207,11 +211,19 @@ module graphics_top(
     end
 
     reg [3:0] o_r, o_g, o_b;
-    reg o_hsync, o_vsync, hsync, vsync;
+    reg o_hsync, o_vsync;
+    wire hsync, vsync;
     wire reset;
 
-    assign ja = { o_g, o_r };
-    assign jb = { 2'b0, o_vsync, o_hsync, o_b };
+    wire [1:0] RED = SW[1:0];
+    wire [1:0] GRE = SW[3:2];
+    wire [1:0] BLU = SW[5:4]; 
+
+    assign VGA_R = RED == 0 ? o_r : RED == 1 ? o_g : o_b;
+    assign VGA_G = GRE == 0 ? o_r : GRE == 1 ? o_g : o_b;
+    assign VGA_B = BLU == 0 ? o_r : BLU == 1 ? o_g : o_b;
+    assign VGA_HS = o_hsync;
+    assign VGA_VS = o_vsync;
 
     assign reset = btn[0];
 
@@ -233,7 +245,7 @@ module graphics_top(
         .de
     );
 
-    wire [3:0] r, g, b;
+    logic [3:0] r, g, b;
 
     always @(*) begin
         if (sx >= 192 && sx < 448 && sy >= 112 && sy < 368) begin
