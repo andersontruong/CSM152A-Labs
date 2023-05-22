@@ -3,7 +3,7 @@ module lcg #(parameter N=32, a=1103515245, c=12345, seed=1) (
         output reg [N-1:0] rand
     );
 
-    initial rand = seed;
+    assign rand = seed;
 
     reg [N-1:0] next_rand;
 
