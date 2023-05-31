@@ -7,20 +7,21 @@ module score
     i_clk,
     i_rst,
     i_en,
-    ADJ,
-    SEL,
-    MINUTES,
-    SECONDS
+    SCORE
 );
 
-// TO DO: UPDATE IMPLEMENTATION FROM LAB 3 TO SCORE COUNTER
+input wire i_clk, i_rst, i_en;
+output wire [13:0] SCORE;
+
+wire clk_selected;
+wire score_carry; // is this necessary?
 
 counter #(.MAX(10000)) score_counter(
-        .i_clk(clk_selected), 
-        .i_en(second_en), 
+        .i_clk(i_clk), 
+        .i_en(i_en), 
         .i_rst(i_rst), 
-        .o_count(SECONDS), 
-        .o_carry(second_carry)
+        .o_count(SCORE), 
+        .o_carry(score_carry)
         );
 
 endmodule
