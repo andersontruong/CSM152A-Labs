@@ -15,7 +15,7 @@ module game(
     reg [5:0] CURR_POS;
 
     wire [2:0] CURR_X, CURR_Y, RAND_X, RAND_Y, VEC_X, VEC_Y;
-    wire SIGN_X, SIGN_Y
+    wire SIGN_X, SIGN_Y;
     reg [2:0] NEXT_X, NEXT_Y;
 
     lcg rng(.clk(GAME_CLOCK), .o_rand(RAND));
@@ -58,7 +58,7 @@ module game(
     always @(posedge GAME_CLOCK) begin
         reds[VEC_POS] <= 4'h0;
         blues[VEC_POS] <= 4'hf;
-        greens[VEC_POS] < = 4'hf;
+        greens[VEC_POS] <= 4'hf;
     end
 
     // Map color to positions
