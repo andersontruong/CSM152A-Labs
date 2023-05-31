@@ -8,7 +8,9 @@ module graphics_top(
     output [3:0] vgaGreen,
     output [3:0] vgaBlue,
     output Hsync,
-    output Vsync
+    output Vsync,
+    output [7:0] seg,
+    output [3:0] dig_sel
     );
 
     reg [3:0] reds [63:0];
@@ -41,6 +43,29 @@ module graphics_top(
     wire de;
 
     divider display_clk(.i_clk(CLK100MHZ), .i_rst(reset), .o_clk(CLK25MHZ));
+
+    wire [13:0] score;
+    wire [3:0] dig1, dig2, dig3, dig4;
+
+    score_counter score(
+        .i_clk(CLK100MHZ),
+        .i_rst(reset),
+        .i_en(1),
+        .o_score(score)
+    );
+
+    digits digs(score, dig4, dig3, dig2, dig1);
+
+    fourdigitdriver digdriver(
+        .i_clk(CLK25MHZ),
+        .i_rst(reset),
+        .i_dig1(dig1),
+        .i_dig2(dig2),
+        .i_dig3(dig3),
+        .i_dig4(dig4),
+        .seg(seg),
+        .dig_seg(dig_seg)
+    );
 
     display_480p display_instance(
         .clk_pix(CLK25MHZ),
