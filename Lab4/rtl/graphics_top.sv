@@ -47,7 +47,7 @@ module graphics_top(
     wire [13:0] score;
     wire [3:0] dig1, dig2, dig3, dig4;
 
-    score_counter score(
+    score_counter score_ctr(
         .i_clk(CLK100MHZ),
         .i_rst(reset),
         .i_en(1),
@@ -59,12 +59,12 @@ module graphics_top(
     fourdigitdriver digdriver(
         .i_clk(CLK25MHZ),
         .i_rst(reset),
-        .i_dig1(dig1),
-        .i_dig2(dig2),
-        .i_dig3(dig3),
-        .i_dig4(dig4),
+        .dig1(dig1),
+        .dig2(dig2),
+        .dig3(dig3),
+        .dig4(dig4),
         .seg(seg),
-        .dig_seg(dig_seg)
+        .dig_sel(dig_sel)
     );
 
     display_480p display_instance(
