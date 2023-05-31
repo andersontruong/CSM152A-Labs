@@ -57,7 +57,7 @@ module graphics_top(
     digits digs(score, dig4, dig3, dig2, dig1);
 
     fourdigitdriver digdriver(
-        .i_clk(CLK25MHZ),
+        .i_clk(CLK100MHZ),
         .i_rst(reset),
         .dig1(dig1),
         .dig2(dig2),
