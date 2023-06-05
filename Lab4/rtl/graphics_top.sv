@@ -3,7 +3,7 @@
 module graphics_top(
     input  CLK100MHZ,
     input  [4:0] btn,
-    input  [2:0] sw, // Used to be input [5:0] sw
+    input  [5:0] sw, // Used to be input [5:0] sw
     input MISO, // Master In Slave Out, Pin 3, Port JA
     output [3:0] vgaRed,
     output [3:0] vgaGreen,
@@ -18,11 +18,11 @@ module graphics_top(
     // output [2:0] LED // LEDs 2, 1, and 0
     );
 
-    reg [3:0] reds [63:0];
-    reg [3:0] blues [63:0];
-    reg [3:0] greens [63:0];
+    reg [3:0] reds [4095:0];
+    reg [3:0] blues [4095:0];
+    reg [3:0] greens [4095:0];
 
-    game game_inst(CLK100MHZ, reds, blues, greens);
+    game game_inst(CLK100MHZ, reset, reds, blues, greens);
 
     reg [3:0] o_r, o_g, o_b;
     reg o_hsync, o_vsync;
@@ -105,9 +105,9 @@ module graphics_top(
 
     always @(*) begin
         if (sx >= 192 && sx < 448 && sy >= 112 && sy < 368) begin
-            r <= reds[((sx - 192) >> 5) + (((sy - 112) >> 5) << 3)];
-            g <= greens[((sx - 192) >> 5) + (((sy - 112) >> 5) << 3)];
-            b <= blues[((sx - 192) >> 5) + (((sy - 112) >> 5) << 3)];
+            r <= reds[((sx - 192) >> 2) + (((sy - 112) >> 2) << 6)];
+            g <= greens[((sx - 192) >> 2) + (((sy - 112) >> 2) << 6)];
+            b <= blues[((sx - 192) >> 2) + (((sy - 112) >> 2) << 6)];
         end
         else begin
             r <= 4'h0;
