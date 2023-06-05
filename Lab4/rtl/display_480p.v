@@ -3,9 +3,9 @@ module display_480p(
     input  wire rst_pix,   // reset in pixel clock domain
     output wire [9:0] o_sx,  // horizontal screen position
     output wire [9:0] o_sy,  // vertical screen position
-    output wire hsync,     // horizontal sync
-    output wire vsync,     // vertical sync
-    output wire de         // data enable (low in blanking interval)
+    output reg  hsync,     // horizontal sync
+    output reg  vsync,     // vertical sync
+    output reg  de         // data enable (low in blanking interval)
     );
 
     // horizontal timings

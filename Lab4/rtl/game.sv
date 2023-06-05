@@ -10,7 +10,7 @@ module game(
 
     wire [31:0] RAND;
     wire [5:0] NEXT_POS, RAND_POS, VEC_POS;
-    wire [3:0] RAND_COLOR;
+    wire [1:0] RAND_COLOR;
 
     reg [5:0] CURR_POS;
 
@@ -52,13 +52,7 @@ module game(
 
     // Move to next position
     always @(posedge GAME_CLOCK) begin
-        CURR_POS <= NEXT_POS;
-    end
-
-    always @(posedge GAME_CLOCK) begin
-        reds[VEC_POS] <= 4'h0;
-        blues[VEC_POS] <= 4'hf;
-        greens[VEC_POS] <= 4'hf;
+        CURR_POS <= RAND_POS;;
     end
 
     // Map color to positions
@@ -69,26 +63,27 @@ module game(
             blues[i] = 4'h0;
             greens[i] = 4'h0;
         end
+
         case (RAND_COLOR)
             0: begin
-                reds[CURR_POS] = 4'hf;
-                blues[CURR_POS] = 4'h0;
-                greens[CURR_POS] = 4'h0;
+                reds[CURR_POS] <= 4'hf;
+                blues[CURR_POS] <= 4'h0;
+                greens[CURR_POS] <= 4'h0;
             end
             1: begin
-                reds[CURR_POS] = 4'h0;
-                blues[CURR_POS] = 4'h0;
-                greens[CURR_POS] = 4'hf;
+                reds[CURR_POS] <= 4'h0;
+                blues[CURR_POS] <= 4'h0;
+                greens[CURR_POS] <= 4'hf;
             end
             2: begin
-                reds[CURR_POS] = 4'h0;
-                blues[CURR_POS] = 4'hf;
-                greens[CURR_POS] = 4'h0;
+                reds[CURR_POS] <= 4'h0;
+                blues[CURR_POS] <= 4'hf;
+                greens[CURR_POS] <= 4'h0;
             end
             3: begin
-                reds[CURR_POS] = 4'hf;
-                blues[CURR_POS] = 4'hf;
-                greens[CURR_POS] = 4'hf;
+                reds[CURR_POS] <= 4'hf;
+                blues[CURR_POS] <= 4'hf;
+                greens[CURR_POS] <= 4'hf;
             end
         endcase
     end
