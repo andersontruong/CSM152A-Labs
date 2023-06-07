@@ -3,7 +3,7 @@
 module graphics_top(
     input  CLK100MHZ,
     input  [4:0] btn,
-    input  [5:0] sw, // Used to be input [5:0] sw
+    input  [15:0] sw, // Used to be input [5:0] sw
     input vauxp6,
     input vauxn6,
     input vauxp7,
@@ -27,7 +27,7 @@ module graphics_top(
     assign reset = btn[0];
 
     /* BEGIN DISPLAY */
-    localparam integer CANVAS_SIZE = 32;
+    localparam integer CANVAS_SIZE = 16;
     localparam integer PIXELS = CANVAS_SIZE*CANVAS_SIZE;
 
     reg [3:0] reds [PIXELS - 1:0];
@@ -35,7 +35,8 @@ module graphics_top(
     reg [3:0] greens [PIXELS - 1:0];
 
     // Generates canvas
-    game #(.PIXELS(PIXELS)) game_inst(CLK100MHZ, reset, reds, blues, greens);
+
+    game #(.PIXELS(PIXELS)) game_inst(CLK100MHZ, reset, btn[4:1], X_DIR, Y_DIR, sw, reds, blues, greens, score);
 
     logic [3:0] o_r, o_g, o_b;
     logic o_hsync, o_vsync;
@@ -53,12 +54,12 @@ module graphics_top(
     logic [COORD_WIDTH - 1:0] sx, sy;
     logic de;
 
-    divider display_clk(.i_clk(CLK100MHZ), .i_rst(reset), .o_clk(CLK25MHZ));
+    divider display_clk(.i_clk(CLK100MHZ), .i_rst(0), .o_clk(CLK25MHZ));
 
     // Generate (sx, sy, hsync, vsync, de) from a clock
     display_480p display_instance(
         .clk_pix(CLK25MHZ),
-        .rst_pix(reset),
+        .rst_pix(0),
         .o_sx(sx),
         .o_sy(sy),
         .hsync,
@@ -162,29 +163,16 @@ module graphics_top(
             else if (addr == 8'h17) begin
                 addr <= 8'h16;
                 if (upper >= 14)
-                    Y_DIR <= 0;
+                    Y_DIR <= 2;
                 else if (upper >= 1)
                     Y_DIR <= 1;
                 else
-                    Y_DIR <= 2;
+                    Y_DIR <= 0;
             end
         end
     end
 
-    assign dig1 = X_DIR;
-    assign dig4 = Y_DIR;
-
-    // score_counter score_ctr(
-    //     .i_clk(CLK100MHZ),
-    //     .i_rst(reset),
-    //     .i_en(1),
-    //     .o_score(score)
-    // );
-
-    // digits digs(score, dig4, dig3, dig2, dig1);
-
-    assign dig2 = 4'b0;
-    assign dig3 = 4'b0;
+    digits digs(score, dig4, dig3, dig2, dig1);
 
     fourdigitdriver digdriver(
         .i_clk(CLK100MHZ),
