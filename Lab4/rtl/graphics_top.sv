@@ -27,82 +27,82 @@ module graphics_top(
     assign reset = btn[0];
 
     /* BEGIN DISPLAY */
-    // localparam integer CANVAS_SIZE = 32;
-    // localparam integer PIXELS = CANVAS_SIZE*CANVAS_SIZE;
+    localparam integer CANVAS_SIZE = 32;
+    localparam integer PIXELS = CANVAS_SIZE*CANVAS_SIZE;
 
-    // reg [3:0] reds [PIXELS - 1:0];
-    // reg [3:0] blues [PIXELS - 1:0];
-    // reg [3:0] greens [PIXELS - 1:0];
+    reg [3:0] reds [PIXELS - 1:0];
+    reg [3:0] blues [PIXELS - 1:0];
+    reg [3:0] greens [PIXELS - 1:0];
 
-    // // Generates canvas
-    // game #(.PIXELS(PIXELS)) game_inst(CLK100MHZ, reset, reds, blues, greens);
+    // Generates canvas
+    game #(.PIXELS(PIXELS)) game_inst(CLK100MHZ, reset, reds, blues, greens);
 
-    // logic [3:0] o_r, o_g, o_b;
-    // logic o_hsync, o_vsync;
-    // logic hsync, vsync;
+    logic [3:0] o_r, o_g, o_b;
+    logic o_hsync, o_vsync;
+    logic hsync, vsync;
 
-    // assign vgaRed = o_r;
-    // assign vgaGreen = o_g;
-    // assign vgaBlue = o_b;
-    // assign Hsync = o_hsync;
-    // assign Vsync = o_vsync;
+    assign vgaRed = o_r;
+    assign vgaGreen = o_g;
+    assign vgaBlue = o_b;
+    assign Hsync = o_hsync;
+    assign Vsync = o_vsync;
 
-    // logic CLK25MHZ;
+    logic CLK25MHZ;
 
-    // localparam COORD_WIDTH = 10;
-    // logic [COORD_WIDTH - 1:0] sx, sy;
-    // logic de;
+    localparam COORD_WIDTH = 10;
+    logic [COORD_WIDTH - 1:0] sx, sy;
+    logic de;
 
-    // divider display_clk(.i_clk(CLK100MHZ), .i_rst(reset), .o_clk(CLK25MHZ));
+    divider display_clk(.i_clk(CLK100MHZ), .i_rst(reset), .o_clk(CLK25MHZ));
 
-    // // Generate (sx, sy, hsync, vsync, de) from a clock
-    // display_480p display_instance(
-    //     .clk_pix(CLK25MHZ),
-    //     .rst_pix(reset),
-    //     .o_sx(sx),
-    //     .o_sy(sy),
-    //     .hsync,
-    //     .vsync,
-    //     .de
-    // );
+    // Generate (sx, sy, hsync, vsync, de) from a clock
+    display_480p display_instance(
+        .clk_pix(CLK25MHZ),
+        .rst_pix(reset),
+        .o_sx(sx),
+        .o_sy(sy),
+        .hsync,
+        .vsync,
+        .de
+    );
 
-    // logic [3:0] r, g, b;
+    logic [3:0] r, g, b;
 
-    // // Map pixel array to physical screen blocks
-    // localparam integer SCREEN_START_X = 192;
-    // localparam integer SCREEN_SIZE = 256;
-    // localparam integer SCREEN_START_Y = 112;
-    // localparam integer PIXELS_PER_BLOCK = SCREEN_SIZE / CANVAS_SIZE;
-    // localparam integer PIXELS_PER_BLOCK_SHIFT = $clog2(PIXELS_PER_BLOCK);
-    // localparam integer ROW_SHIFT = $clog2(CANVAS_SIZE);
+    // Map pixel array to physical screen blocks
+    localparam integer SCREEN_START_X = 192;
+    localparam integer SCREEN_SIZE = 256;
+    localparam integer SCREEN_START_Y = 112;
+    localparam integer PIXELS_PER_BLOCK = SCREEN_SIZE / CANVAS_SIZE;
+    localparam integer PIXELS_PER_BLOCK_SHIFT = $clog2(PIXELS_PER_BLOCK);
+    localparam integer ROW_SHIFT = $clog2(CANVAS_SIZE);
 
-    // always @(*) begin
-    //     if (sx >= SCREEN_START_X && sx < SCREEN_START_X + SCREEN_SIZE && sy >= SCREEN_START_Y && sy < SCREEN_START_Y + SCREEN_SIZE) begin
-    //         r <= reds[((sx - SCREEN_START_X) >> PIXELS_PER_BLOCK_SHIFT) + (((sy - SCREEN_START_Y) >> PIXELS_PER_BLOCK_SHIFT) << ROW_SHIFT)];
-    //         g <= greens[((sx - SCREEN_START_X) >> PIXELS_PER_BLOCK_SHIFT) + (((sy - SCREEN_START_Y) >> PIXELS_PER_BLOCK_SHIFT) << ROW_SHIFT)];
-    //         b <= blues[((sx - SCREEN_START_X) >> PIXELS_PER_BLOCK_SHIFT) + (((sy - SCREEN_START_Y) >> PIXELS_PER_BLOCK_SHIFT) << ROW_SHIFT)];
-    //     end
-    //     else begin
-    //         r <= 4'h0;
-    //         g <= 4'h0;
-    //         b <= 4'h0;
-    //     end
-    // end
+    always @(*) begin
+        if (sx >= SCREEN_START_X && sx < SCREEN_START_X + SCREEN_SIZE && sy >= SCREEN_START_Y && sy < SCREEN_START_Y + SCREEN_SIZE) begin
+            r <= reds[((sx - SCREEN_START_X) >> PIXELS_PER_BLOCK_SHIFT) + (((sy - SCREEN_START_Y) >> PIXELS_PER_BLOCK_SHIFT) << ROW_SHIFT)];
+            g <= greens[((sx - SCREEN_START_X) >> PIXELS_PER_BLOCK_SHIFT) + (((sy - SCREEN_START_Y) >> PIXELS_PER_BLOCK_SHIFT) << ROW_SHIFT)];
+            b <= blues[((sx - SCREEN_START_X) >> PIXELS_PER_BLOCK_SHIFT) + (((sy - SCREEN_START_Y) >> PIXELS_PER_BLOCK_SHIFT) << ROW_SHIFT)];
+        end
+        else begin
+            r <= 4'h0;
+            g <= 4'h0;
+            b <= 4'h0;
+        end
+    end
 
-    // always @(posedge CLK25MHZ) begin
-    //     o_hsync <= hsync;
-    //     o_vsync <= vsync;
-    //     if (de) begin
-    //         o_r <= r;
-    //         o_g <= g;
-    //         o_b <= b;
-    //     end
-    //     else begin
-    //         o_r <= 4'h0;
-    //         o_g <= 4'h0;
-    //         o_b <= 4'h0;
-    //     end
-    // end
+    always @(posedge CLK25MHZ) begin
+        o_hsync <= hsync;
+        o_vsync <= vsync;
+        if (de) begin
+            o_r <= r;
+            o_g <= g;
+            o_b <= b;
+        end
+        else begin
+            o_r <= 4'h0;
+            o_g <= 4'h0;
+            o_b <= 4'h0;
+        end
+    end
     /* END DISPLAY */
 
     logic enable;
@@ -213,29 +213,5 @@ module graphics_top(
     //     .seg(seg),
     //     .dig_sel(dig_sel)
     // );
-
-
-    // // 5 Hz Clock Signal to send/receive data to/from PmodJSTK
-    // divider #(.DIV(20_000_000)) genSndRec(
-    //     .CLK(CLK100MHZ),
-    //     .RST(reset),
-    //     .CLKOUT(sndRec)
-    // );
-
-    // // Use state of switch 0 to select output of X position or Y position data to SSD
-    // assign posData = (sw[0] == 1'b1) ? {jstkData[9:8], jstkData[23:16]} : {jstkData[25:24], jstkData[39:32]};
-
-    // // Data to be sent to PmodJSTK, lower two bits will turn on leds on PmodJSTK
-    // assign sndData = {8'b100000, {sw[1], sw[2]}};
-
-    // // Assign PmodJSTK button status to LED[2:0]
-    // always @(sndRec or reset or jstkData) begin
-    //         if(reset == 1'b1) begin
-    //                 LED <= 3'b000;
-    //         end
-    //         else begin
-    //                 LED <= {jstkData[1], {jstkData[2], jstkData[0]}};
-    //         end
-    // end
 
 endmodule
