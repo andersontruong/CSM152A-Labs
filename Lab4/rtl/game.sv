@@ -1,45 +1,59 @@
-module game(
+module game
+#(
+    parameter integer PIXELS = 64
+)
+(
     input CLK100MHZ,
     input reset,
-    output reg [3:0] reds [4095:0],
-    output reg [3:0] blues [4095:0],
-    output reg [3:0] greens [4095:0]
+    output reg [3:0] reds [PIXELS - 1:0],
+    output reg [3:0] blues [PIXELS - 1:0],
+    output reg [3:0] greens [PIXELS - 1:0]
 );
-    wire GAME_CLOCK;
+    localparam integer POS_SIZE = $clog2(PIXELS);
+    localparam integer CANVAS_SIZE = $sqrt(PIXELS);
+    localparam integer VEC_SIZE = $clog2(CANVAS_SIZE);
 
+    // Game clock
+    logic GAME_CLOCK;
     divider #(.DIV(12_500_000)) game_clock_gen(.i_clk(CLK100MHZ), .i_rst(reset), .o_clk(GAME_CLOCK));
 
-    wire [31:0] RAND;
-    wire [11:0] NEXT_POS, RAND_POS, VEC_POS;
-    reg [1:0] RAND_COLOR;
+    // Array positions and position vectors
+    logic [POS_SIZE - 1:0] CURR_POS, NEXT_POS, RAND_POS, VEC_POS;
+    logic [VEC_SIZE - 1:0] CURR_X, CURR_Y;
 
-    wire [11:0] CURR_POS;
+    // Random quantities
+    logic [31:0] RAND_FOR_COLOR, RAND_FOR_DIR;
+    logic [3:0] RAND_DIR;
+    logic [1:0] RAND_COLOR;
 
-    reg [5:0] CURR_X, CURR_Y;
-    wire [5:0] VEC_X, VEC_Y, UNIT_X, UNIT_Y;
-    wire SIGN_X, SIGN_Y;
-    wire [5:0] NEXT_X, NEXT_Y;
+    // RNGs
+    lcg rng1(.clk(GAME_CLOCK), .o_rand(RAND_FOR_COLOR));
+    lcg rng2(.clk(GAME_CLOCK), .o_rand(RAND_FOR_DIR));
 
-    lcg rng(.clk(GAME_CLOCK), .o_rand(RAND));
+    // Target switch clock
+    logic PATH_CARRY;
+    counter #(.N(2)) path_divider(.i_clk(GAME_CLOCK), .i_en(1), .i_rst(reset), .o_count(), .o_carry(PATH_CARRY));
 
-    wire [31:0] DIR_RAND;
+    logic COLLISION;
 
-    lcg rng2(.clk(GAME_CLOCK), .o_rand(DIR_RAND));
+    assign COLLISION = CURR_X == 0 || 
+                       CURR_X == 1 || 
+                       CURR_X == CANVAS_SIZE - 1 || 
+                       CURR_X == CANVAS_SIZE - 2 || 
+                       CURR_Y == 0 || 
+                       CURR_Y == 1 ||
+                       CURR_Y == CANVAS_SIZE - 1 ||
+                       CURR_Y == CANVAS_SIZE - 2;
 
-    reg [3:0] RAND_DIR;
-
-    wire [1:0] path_count;
-    wire path_carry;
-    counter #(.N(2)) path_counter(.i_clk(GAME_CLOCK), .i_en(1), .i_rst(reset), .o_count(path_count), .o_carry(path_carry));
+    assign CURR_POS = CURR_X + CANVAS_SIZE*CURR_Y;
 
     always @(posedge GAME_CLOCK) begin
-        if (path_carry) begin
-            RAND_DIR <= (DIR_RAND >> 28);
-            RAND_COLOR <= (RAND >> 30);
+        if (PATH_CARRY || COLLISION) begin
+            RAND_DIR <= (RAND_FOR_DIR >> 28);
+            RAND_COLOR <= (RAND_FOR_COLOR >> 30);
         end
     end
 
-    reg [5:0] RAND_X, RAND_Y;
     always @(posedge GAME_CLOCK) begin
         case (RAND_DIR)
             0: begin
@@ -109,17 +123,16 @@ module game(
         endcase
     end
 
-    assign CURR_POS = CURR_X + 64*CURR_Y;
-
-    // Map color to positions
     integer i;
     always @(posedge GAME_CLOCK) begin
+        // Background paint
         for (i = 0; i < 4096; i = i + 1) begin
-            reds[i] = 4'hb;
-            blues[i] = 4'hb;
-            greens[i] = 4'hb;
+            reds[i] = 4'h1;
+            blues[i] = 4'h1;
+            greens[i] = 4'h1;
         end
 
+        // Paint target
         case (RAND_COLOR)
             0: begin
                 reds[CURR_POS] <= 4'hf;

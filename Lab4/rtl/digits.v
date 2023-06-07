@@ -1,5 +1,5 @@
 module digits(in_bin, out_dec1000, out_dec100, out_dec10, out_dec1);
-    input wire [13:0] in_bin; // 14 bit input
+    input wire [9:0] in_bin; // 14 bit input
     output wire [3:0] out_dec1000; // 4 bit output for 1000s digit
     output wire [3:0] out_dec100; // 4 bit output for 100s digit
     output wire [3:0] out_dec10; // 4 bit output for 10s digit

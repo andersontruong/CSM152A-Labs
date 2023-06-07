@@ -1,6 +1,6 @@
 module fourdigitdriver
 #(
-    parameter REFRESH_DIV=1_000_000
+    parameter REFRESH_DIV=100_000
 )
 (
     i_clk,
