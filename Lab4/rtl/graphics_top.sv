@@ -143,6 +143,8 @@ module graphics_top(
     // 0: none, 1: right, 2: left
     logic [1:0] X_DIR, Y_DIR;
 
+    // assign addr = 8'h16;
+
     always @(posedge CLK100MHZ) begin
         if (reset) begin
             addr <= 8'h16;
@@ -150,18 +152,18 @@ module graphics_top(
         else if (ready) begin
             if (addr == 8'h16) begin
                 addr <= 8'h17;
-                if (upper == 3)
-                    X_DIR <= 0;
-                else if (upper > 3)
+                if (upper >= 14)
+                    X_DIR <= 2;
+                else if (upper >= 1)
                     X_DIR <= 1;
                 else
-                    X_DIR <= 2;
+                    X_DIR <= 0;
             end
             else if (addr == 8'h17) begin
                 addr <= 8'h16;
-                if (upper == 3)
+                if (upper >= 14)
                     Y_DIR <= 0;
-                else if (upper > 3)
+                else if (upper >= 1)
                     Y_DIR <= 1;
                 else
                     Y_DIR <= 2;
