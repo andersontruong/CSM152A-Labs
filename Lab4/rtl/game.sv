@@ -49,7 +49,7 @@ module game
     );
 
     // Game clock
-    logic GAME_CLOCK, PLAYER_CLOCK;
+    logic GAME_CLOCK, PLAYER_CLOCK, SCORE_CLOCK;
     logic [26:0] target_speed, player_speed;
 
     assign target_speed = score < 50 ? 25_000_000 - 500_000*score : 500_000;
@@ -57,6 +57,7 @@ module game
 
     playerdivider game_clock_gen(.i_clk(CLK100MHZ), .i_rst(0), .i_DIV(target_speed), .o_clk(GAME_CLOCK));
     playerdivider player_clock_gen(.i_clk(CLK100MHZ), .i_rst(0), .i_DIV(player_speed), .o_clk(PLAYER_CLOCK));
+    divider #(.DIV(10_000_000)) score_clock(.i_clk(CLK100MHZ), .i_rst(0), .o_clk(SCORE_CLOCK));
 
     // Array positions and position vectors
     logic [POS_SIZE - 1:0] CURR_POS;
@@ -85,7 +86,7 @@ module game
     end
 
     always @(posedge GAME_CLOCK) begin
-        if (PATH_CARRY | reset) begin
+        if (PATH_CARRY | reset | move) begin
             RAND_DIR <= (RAND_FOR_DIR >> 29);
             RAND_COLOR <= (RAND_FOR_COLOR >> 30);
         end
@@ -140,7 +141,7 @@ module game
     logic move;
     logic score_changed;
 
-    always @(posedge PLAYER_CLOCK) begin 
+    always @(posedge SCORE_CLOCK) begin 
         if (reset) begin
             score <= 0;
         end
