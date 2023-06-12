@@ -1,0 +1,1599 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Jun 11 00:52:51 2023
+# Process ID: 20784
+# Current directory: /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb
+# Command line: vivado
+# Log file: /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/vivado.log
+# Journal file: /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/vivado.jou
+# Running On: anderson, OS: Linux, CPU Frequency: 3400.059 MHz, CPU Physical cores: 4, Host memory: 16391 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /tools/Xilinx/Vivado/2022.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project /home/anderson/lab4_m152a/lab4_m152a.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/debounce.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/score.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/PmodJSTK.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/SPImode0.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/spiCtrl.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/mouse.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/divider_tb.v /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/digits_tb.v /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/playerdivider_tb.v /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/debounce_tb.sv /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/counter_tb.v /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/lcg_tb.v}
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/divider_tb.v /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/digits_tb.v /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/playerdivider_tb.v /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/debounce_tb.sv /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/counter_tb.v /home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/lcg_tb.v}
+WARNING: [filemgmt 56-12] File '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/divider_tb.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/digits_tb.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/playerdivider_tb.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/debounce_tb.sv' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/counter_tb.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/lcg_tb.v' cannot be added to the project because it already exists in the project, skipping this file
+set_property top counter_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'counter_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'counter_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj counter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/counter_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot counter_tb_behav xil_defaultlib.counter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot counter_tb_behav xil_defaultlib.counter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 3 for port 'max' [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/counter_tb.v:8]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.counter(N=3)
+Compiling module xil_defaultlib.counter_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot counter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "counter_tb_behav -key {Behavioral:sim_1:Functional:counter_tb} -tclbatch {counter_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source counter_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'counter_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 6681.992 ; gain = 75.379 ; free physical = 2473 ; free virtual = 11440
+set_property top debounce_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'debounce_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'debounce_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj debounce_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/debounce_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot debounce_tb_behav xil_defaultlib.debounce_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot debounce_tb_behav xil_defaultlib.debounce_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 2 for port 'max' [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/debounce.v:35]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.counter(N=2)
+Compiling module xil_defaultlib.debounce(N=2)
+Compiling module xil_defaultlib.debounce_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot debounce_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "debounce_tb_behav -key {Behavioral:sim_1:Functional:debounce_tb} -tclbatch {debounce_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source debounce_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'debounce_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 6750.273 ; gain = 41.832 ; free physical = 2346 ; free virtual = 11372
+set_property top digits_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'digits_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'digits_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj digits_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/digits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module digits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/digits_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module digits_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot digits_tb_behav xil_defaultlib.digits_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot digits_tb_behav xil_defaultlib.digits_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 10 for port 'in_bin' [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/digits_tb.v:6]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.digits
+Compiling module xil_defaultlib.digits_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot digits_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "digits_tb_behav -key {Behavioral:sim_1:Functional:digits_tb} -tclbatch {digits_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source digits_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+10s: xxxx
+1s: xxxx
+$finish called at time : 600 ns : File "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/digits_tb.v" Line 17
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'digits_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 6815.926 ; gain = 47.629 ; free physical = 2314 ; free virtual = 11344
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'digits_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'digits_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj digits_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/digits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module digits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/digits_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module digits_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot digits_tb_behav xil_defaultlib.digits_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot digits_tb_behav xil_defaultlib.digits_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.digits
+Compiling module xil_defaultlib.digits_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot digits_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "digits_tb_behav -key {Behavioral:sim_1:Functional:digits_tb} -tclbatch {digits_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source digits_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'digits_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 6874.145 ; gain = 0.000 ; free physical = 2309 ; free virtual = 11354
+set_property top divider_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'divider_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'divider_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj divider_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/divider_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot divider_tb_behav xil_defaultlib.divider_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot divider_tb_behav xil_defaultlib.divider_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 27 for port 'max' [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v:15]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.counter_default
+Compiling module xil_defaultlib.divider
+Compiling module xil_defaultlib.divider_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot divider_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "divider_tb_behav -key {Behavioral:sim_1:Functional:divider_tb} -tclbatch {divider_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source divider_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'divider_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 6928.852 ; gain = 39.832 ; free physical = 2247 ; free virtual = 11299
+set_property top fourdigitdriver_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fourdigitdriver_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fourdigitdriver_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj fourdigitdriver_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/fourdigitdriver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fourdigitdriver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fourdigitdriver_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fourdigitdriver_tb_behav xil_defaultlib.fourdigitdriver_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fourdigitdriver_tb_behav xil_defaultlib.fourdigitdriver_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-2861] module 'fourdigitdriver' does not have a parameter named BLINK_DIV [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v:9]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 27 for port 'max' [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v:15]
+ERROR: [VRFC 10-8616] 'fourdigitdriver(REFRESH_DIV=1)' requires 8 arguments [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v:9]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fourdigitdriver_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fourdigitdriver_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj fourdigitdriver_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/fourdigitdriver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fourdigitdriver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fourdigitdriver_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fourdigitdriver_tb_behav xil_defaultlib.fourdigitdriver_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fourdigitdriver_tb_behav xil_defaultlib.fourdigitdriver_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 27 for port 'max' [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v:15]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.counter_default
+Compiling module xil_defaultlib.divider(DIV=1)
+Compiling module xil_defaultlib.fourdigitdriver(REFRESH_DIV=1)
+Compiling module xil_defaultlib.fourdigitdriver_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fourdigitdriver_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fourdigitdriver_tb_behav -key {Behavioral:sim_1:Functional:fourdigitdriver_tb} -tclbatch {fourdigitdriver_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source fourdigitdriver_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fourdigitdriver_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7028.707 ; gain = 51.832 ; free physical = 2183 ; free virtual = 11278
+set_property top lcg_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'lcg_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'lcg_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj lcg_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/lcg.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lcg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/lcg_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lcg_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot lcg_tb_behav xil_defaultlib.lcg_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot lcg_tb_behav xil_defaultlib.lcg_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'rand' on this module [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/lcg_tb.v:11]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'lcg_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'lcg_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj lcg_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/lcg_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lcg_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot lcg_tb_behav xil_defaultlib.lcg_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot lcg_tb_behav xil_defaultlib.lcg_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'o_rand' [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/lcg_tb.v:18]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'rand' is not permitted [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/lcg_tb.v:18]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'lcg_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'lcg_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj lcg_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/lcg_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lcg_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot lcg_tb_behav xil_defaultlib.lcg_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot lcg_tb_behav xil_defaultlib.lcg_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'rand' is not permitted [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/lcg_tb.v:19]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'lcg_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'lcg_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj lcg_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/lcg_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lcg_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot lcg_tb_behav xil_defaultlib.lcg_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot lcg_tb_behav xil_defaultlib.lcg_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.lcg
+Compiling module xil_defaultlib.lcg_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot lcg_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "lcg_tb_behav -key {Behavioral:sim_1:Functional:lcg_tb} -tclbatch {lcg_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source lcg_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+rand =          x
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'lcg_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7124.566 ; gain = 39.832 ; free physical = 2110 ; free virtual = 11219
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'lcg_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'lcg_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj lcg_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/lcg_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lcg_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot lcg_tb_behav xil_defaultlib.lcg_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot lcg_tb_behav xil_defaultlib.lcg_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.lcg
+Compiling module xil_defaultlib.lcg_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot lcg_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "lcg_tb_behav -key {Behavioral:sim_1:Functional:lcg_tb} -tclbatch {lcg_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source lcg_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+rand =          x
+rand =          0
+rand =      12345
+rand = 3554416254
+rand = 2802067423
+rand = 3596950572
+rand =  229283573
+rand = 3256818826
+rand = 1051550459
+rand = 3441282840
+rand = 2941955441
+rand =  551188310
+rand = 2951033815
+rand = 1772930244
+rand = 2518396845
+rand =  639546082
+rand = 1381971571
+rand = 1695770928
+rand = 2121308585
+rand = 3866696494
+rand = 3144468175
+rand = 1157490780
+rand = 3490719589
+rand = 2684337210
+rand = 1511588075
+rand = 1538207304
+rand = 2103497953
+rand = 2854052358
+rand = 3104096455
+rand = 3668764404
+rand = 1588911645
+rand = 2518522002
+rand =   33727075
+rand = 1680572000
+rand =   88489753
+rand = 3430460382
+rand =  527630783
+rand = 1194991756
+rand = 3253908437
+rand = 3001001962
+rand = 2539649755
+rand = 1387182456
+rand = 1538766929
+rand =  654858422
+rand = 4233718199
+rand = 3939628324
+rand = 2985199757
+rand = 3661187650
+rand = 2417027667
+rand = 3452649360
+rand = 1179132041
+rand = 3650472078
+rand = 1941297327
+rand = 2999764156
+rand = 1787378757
+rand = 1328144282
+rand = 2182172875
+rand = 2952753320
+rand = 2382780353
+rand = 1203133286
+rand = 2942447271
+rand =  321843028
+rand = 3873419005
+rand =  154978290
+rand = 2331577923
+rand =  422948032
+rand = 1929199097
+rand = 1179349310
+rand = 1049906079
+rand = 2955465964
+rand =  214614197
+rand =  973693770
+rand =  662438587
+rand =  809784280
+rand =  263435057
+rand = 2030201366
+rand = 3848146839
+rand = 3080115588
+rand = 3361689965
+rand =   45289890
+rand = 2062159411
+rand = 2490222064
+rand = 2896992105
+rand = 3755255278
+rand = 3693959823
+rand = 3934343452
+rand =  393101605
+rand = 1500066554
+rand =  112136363
+rand = 2128634632
+rand =   65456801
+rand = 2491909318
+rand = 2135690375
+rand = 1453107124
+rand =   84176861
+rand =  518465362
+rand = 3520260643
+rand = 2486602528
+rand = 1952263385
+rand = 3089917598
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'lcg_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 7148.574 ; gain = 0.000 ; free physical = 2105 ; free virtual = 11215
+set_property top playerdivider_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'playerdivider_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'playerdivider_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj playerdivider_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/playerdivider_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module playerdivider_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot playerdivider_tb_behav xil_defaultlib.playerdivider_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot playerdivider_tb_behav xil_defaultlib.playerdivider_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'i_DIV' on this module [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/playerdivider_tb.v:7]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'playerdivider_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'playerdivider_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj playerdivider_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/playerdivider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module playerdivider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/playerdivider_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module playerdivider_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot playerdivider_tb_behav xil_defaultlib.playerdivider_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot playerdivider_tb_behav xil_defaultlib.playerdivider_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 27 for port 'i_DIV' [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/playerdivider_tb.v:7]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.counter_default
+Compiling module xil_defaultlib.playerdivider
+Compiling module xil_defaultlib.playerdivider_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot playerdivider_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "playerdivider_tb_behav -key {Behavioral:sim_1:Functional:playerdivider_tb} -tclbatch {playerdivider_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source playerdivider_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'playerdivider_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7211.414 ; gain = 52.832 ; free physical = 2162 ; free virtual = 11240
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'playerdivider_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'playerdivider_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj playerdivider_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/playerdivider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module playerdivider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/playerdivider_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module playerdivider_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot playerdivider_tb_behav xil_defaultlib.playerdivider_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot playerdivider_tb_behav xil_defaultlib.playerdivider_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.counter_default
+Compiling module xil_defaultlib.playerdivider
+Compiling module xil_defaultlib.playerdivider_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot playerdivider_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "playerdivider_tb_behav -key {Behavioral:sim_1:Functional:playerdivider_tb} -tclbatch {playerdivider_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source playerdivider_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'playerdivider_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7235.426 ; gain = 0.000 ; free physical = 2144 ; free virtual = 11231
+set_property top fourdigitdriver_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+current_sim simulation_6
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fourdigitdriver_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fourdigitdriver_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj fourdigitdriver_tb_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fourdigitdriver_tb_behav xil_defaultlib.fourdigitdriver_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fourdigitdriver_tb_behav xil_defaultlib.fourdigitdriver_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 27 for port 'max' [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v:15]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.counter_default
+Compiling module xil_defaultlib.divider(DIV=1)
+Compiling module xil_defaultlib.fourdigitdriver(REFRESH_DIV=1)
+Compiling module xil_defaultlib.fourdigitdriver_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fourdigitdriver_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fourdigitdriver_tb_behav -key {Behavioral:sim_1:Functional:fourdigitdriver_tb} -tclbatch {fourdigitdriver_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source fourdigitdriver_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fourdigitdriver_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 7238.500 ; gain = 0.000 ; free physical = 643 ; free virtual = 9536
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fourdigitdriver_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fourdigitdriver_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj fourdigitdriver_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/fourdigitdriver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fourdigitdriver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fourdigitdriver_tb
+ERROR: [VRFC 10-1280] procedural assignment to a non-register dig_sel is not permitted, left-hand side should be reg/integer/time/genvar [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v:31]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register dig_sel is not permitted, left-hand side should be reg/integer/time/genvar [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v:33]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register dig_sel is not permitted, left-hand side should be reg/integer/time/genvar [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v:35]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register dig_sel is not permitted, left-hand side should be reg/integer/time/genvar [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v:37]
+ERROR: [VRFC 10-8530] module 'fourdigitdriver_tb' is ignored due to previous errors [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v:1]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+current_sim simulation_10
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fourdigitdriver_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fourdigitdriver_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj fourdigitdriver_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/fourdigitdriver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fourdigitdriver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fourdigitdriver_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fourdigitdriver_tb_behav xil_defaultlib.fourdigitdriver_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fourdigitdriver_tb_behav xil_defaultlib.fourdigitdriver_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 27 for port 'max' [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v:15]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'dig_sel' is not permitted [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v:17]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fourdigitdriver_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fourdigitdriver_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj fourdigitdriver_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/fourdigitdriver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fourdigitdriver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fourdigitdriver_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fourdigitdriver_tb_behav xil_defaultlib.fourdigitdriver_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fourdigitdriver_tb_behav xil_defaultlib.fourdigitdriver_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 27 for port 'max' [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v:15]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.counter_default
+Compiling module xil_defaultlib.divider(DIV=1)
+Compiling module xil_defaultlib.fourdigitdriver(REFRESH_DIV=1)
+Compiling module xil_defaultlib.fourdigitdriver_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fourdigitdriver_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fourdigitdriver_tb_behav -key {Behavioral:sim_1:Functional:fourdigitdriver_tb} -tclbatch {fourdigitdriver_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source fourdigitdriver_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fourdigitdriver_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7275.516 ; gain = 16.008 ; free physical = 603 ; free virtual = 9506
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fourdigitdriver_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fourdigitdriver_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj fourdigitdriver_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/fourdigitdriver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fourdigitdriver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/tb/fourdigitdriver_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fourdigitdriver_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fourdigitdriver_tb_behav xil_defaultlib.fourdigitdriver_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fourdigitdriver_tb_behav xil_defaultlib.fourdigitdriver_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 27 for port 'max' [/home/anderson/Documents/GitHub/CSM152A-Labs/Lab4/rtl/divider.v:15]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.counter_default
+Compiling module xil_defaultlib.divider(DIV=1)
+Compiling module xil_defaultlib.fourdigitdriver(REFRESH_DIV=1)
+Compiling module xil_defaultlib.fourdigitdriver_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot fourdigitdriver_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/anderson/lab4_m152a/lab4_m152a.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "fourdigitdriver_tb_behav -key {Behavioral:sim_1:Functional:fourdigitdriver_tb} -tclbatch {fourdigitdriver_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source fourdigitdriver_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fourdigitdriver_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7290.523 ; gain = 7.000 ; free physical = 576 ; free virtual = 9504

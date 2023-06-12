@@ -1,14 +1,25 @@
 module lcg_tb;
-    reg clk, rand;
+    reg clk, rst;
+    wire [31:0] rand;
+    reg [15:0] seed;
 
     initial begin
         clk = 0;
-        forever #5 clk = ~clk;
+        seed = 0;
+        rst = 1;
+        #10;
+        rst = 0;
     end
-
+    
+   always begin
+        #5 clk = ~clk;
+   end
+    
     lcg lcg_inst (
         .clk(clk),
-        .rand(rand)
+        .rst(rst),
+        .seed(seed),
+        .o_rand(rand)
     );
 
     always @(posedge clk) begin

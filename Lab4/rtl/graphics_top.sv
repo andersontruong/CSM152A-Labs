@@ -52,7 +52,7 @@ module graphics_top(
 
     localparam COORD_WIDTH = 10;
     logic [COORD_WIDTH - 1:0] sx, sy;
-    logic de;
+    logic de;figures
 
     divider display_clk(.i_clk(CLK100MHZ), .i_rst(0), .o_clk(CLK25MHZ));
 
@@ -184,22 +184,5 @@ module graphics_top(
         .seg(seg),
         .dig_sel(dig_sel)
     );
-
-    // // Seven Segment Display Controller Logic
-    // wire [3:0] dig1, dig2, dig3, dig4;
-
-    // // Tries to split a 10 bit quantity (posdata) into 4, 4 bit quantities (dig1-4)
-    // digits digs(posData, dig4, dig3, dig2, dig1);
-
-    // fourdigitdriver digdriver(
-    //     .i_clk(CLK100MHZ),
-    //     .i_rst(reset),
-    //     .dig1(dig1),
-    //     .dig2(dig2),
-    //     .dig3(dig3),
-    //     .dig4(dig4),
-    //     .seg(seg),
-    //     .dig_sel(dig_sel)
-    // );
 
 endmodule
